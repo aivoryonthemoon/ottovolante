@@ -32,7 +32,7 @@
 #copertina .photo-download-frame { width: 100% !important; }
 #copertina img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
 .classic-photo-section { padding: 9px 18px; }
-.classic-photo-card { width: 100%; max-width: 362px; margin: 0 auto; background: #404040; }
+.classic-photo-card { width: 100%; max-width: 480px; margin: 0 auto; background: #404040; }
 .classic-photo-card .photo-download-frame { display: block; max-width: 100%; }
 .classic-photo-card img { width: 100%; height: auto; object-fit: contain; }
 .classic-photo-caption { margin: 0; padding: 18px; color: #f2f2f2; font: 14px/1.5 Helvetica, Arial, sans-serif; text-align: center; }

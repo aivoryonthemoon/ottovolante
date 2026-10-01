@@ -10,6 +10,7 @@
 .technical-copy ul { margin: 8px 0 0; padding-left: 22px; }
 .technical-copy li { margin: 4px 0; }
 .video-section { padding: 9px 18px; }
+.video-presentation { margin-top: 24px; margin-bottom: 12px; }
 .video-caption { margin: 0; padding: 18px; background: #404040; color: #f2f2f2; font: 14px/1.5 Helvetica, Arial, sans-serif; text-align: left; }
 .templateFooter { padding: 48px 0 24px !important; flex-grow: 0 !important; }
 .contact-panel { width: 100%; max-width: 960px; padding: 9px 18px; }

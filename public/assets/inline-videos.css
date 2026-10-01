@@ -72,22 +72,7 @@
   outline: 3px solid #2762ad;
   outline-offset: 4px;
 }
-.youtube-channel {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  padding: 22px;
-  background: #404040;
-  color: #f2f2f2;
-  font: 16px/1.5 Helvetica, Arial, sans-serif;
-}
-.youtube-channel svg { width: 64px; height: 45px; flex: none; }
-.youtube-channel p { margin: 0 0 8px; }
-.youtube-channel a { color: #fff; font-weight: 700; text-decoration: underline; }
-.youtube-channel a:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
 @media (max-width: 480px) {
-  .youtube-channel { padding: 18px; gap: 14px; }
-  .youtube-channel svg { width: 48px; height: 34px; }
   .inline-video .youtube-play::before { width: 64px; height: 45px; border-radius: 12px; }
   .inline-video .youtube-play::after {
     border-top-width: 10px;

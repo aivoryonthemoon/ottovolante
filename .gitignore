@@ -1,0 +1,11 @@
+# Local archives, source material and recovery copies
+/backups/
+/reference/
+/scripts/
+/LEGGIMI.txt
+/*.zip
+node_modules/
+.DS_Store
+.env
+.env.*
+*.log

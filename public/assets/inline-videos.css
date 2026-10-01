@@ -1,0 +1,82 @@
+/* Inline players keep the original page layout and a familiar YouTube button. */
+.inline-video {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #111;
+  line-height: 0;
+  isolation: isolate;
+}
+.inline-video > .youtube-play,
+.inline-video iframe {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.inline-video > .youtube-play {
+  overflow: hidden;
+  background: #111;
+  cursor: pointer;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.inline-video > .youtube-play[hidden] { display: none !important; }
+.inline-video .youtube-play > img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100% !important;
+  margin: 0;
+  object-fit: cover;
+}
+.inline-video .youtube-play::before,
+.inline-video .youtube-play::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  pointer-events: none;
+}
+.inline-video .youtube-play::before {
+  width: 72px;
+  height: 50px;
+  border-radius: 14px;
+  background: #f00;
+  box-shadow: 0 2px 12px #0005;
+  transform: translate(-50%, -50%);
+}
+.inline-video .youtube-play::after {
+  width: 0;
+  height: 0;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  border-left: 19px solid #fff;
+  transform: translate(-38%, -50%);
+}
+.inline-video .youtube-play:hover::before { background: #d90000; }
+.inline-video .youtube-play:focus-visible {
+  outline: 3px solid #2762ad;
+  outline-offset: 4px;
+}
+.inline-video .youtube-play:focus-visible::before {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+.inline-video > iframe:focus-visible {
+  outline: 3px solid #2762ad;
+  outline-offset: 4px;
+}
+@media (max-width: 480px) {
+  .inline-video .youtube-play::before { width: 64px; height: 45px; border-radius: 12px; }
+  .inline-video .youtube-play::after {
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 17px;
+  }
+}

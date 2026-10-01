@@ -1,0 +1,96 @@
+.photo-download-frame {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  min-width: 0;
+  flex: 0 1 auto;
+  align-self: center;
+  vertical-align: bottom;
+  line-height: 0;
+}
+.photo-download-frame--header { display: block; width: 100%; }
+/* Allow the original nested flex cards to shrink around wide photo assets. */
+.mcnImageCardBottomContent > div,
+.mcnImageCardImageContentE2E {
+  min-width: 0;
+  max-width: 100%;
+}
+.photo-download-frame > img,
+.photo-download-frame > a > img {
+  display: block;
+  width: 100% !important;
+  max-width: 100%;
+  height: auto !important;
+}
+.photo-download-frame > a { display: block; }
+.photo-download {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  color: #202020;
+  font: 500 14px/1.4 Raleway, Arial, sans-serif;
+  text-align: left;
+  word-break: normal;
+}
+.photo-download[open] { z-index: 3; }
+.photo-download > summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 15px;
+  border: 1px solid #d7d7d7;
+  border-radius: 5px;
+  background: #fff;
+  color: #202020;
+  box-shadow: 0 2px 8px #0002;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+.photo-download > summary::-webkit-details-marker { display: none; }
+.photo-download > summary svg { width: 17px; height: 17px; flex: none; }
+.photo-download > summary:hover { background: #f1f1f1; }
+.photo-download-options {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  width: 225px;
+  max-width: calc(100vw - 48px);
+  padding: 5px;
+  border: 1px solid #d7d7d7;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 5px 20px #0003;
+}
+.photo-download .photo-download-options a {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 11px 12px;
+  min-height: 54px;
+  border-radius: 3px;
+  color: #202020;
+  font-weight: 700;
+  text-decoration: none;
+}
+.photo-download-options a + a { border-top: 1px solid #ececec; }
+.photo-download .photo-download-options a:hover { background: #f1f1f1; }
+.photo-download-options small { font-size: 11px; font-weight: 500; color: #555; }
+.photo-download-frame--stage-plan .photo-download {
+  position: relative;
+  top: auto;
+  right: auto;
+  width: fit-content;
+  margin: 8px 0 0 auto;
+}
+.photo-download summary:focus-visible,
+.photo-download-options a:focus-visible { outline: 3px solid #2762ad; outline-offset: 2px; }
+@media (max-width: 480px) {
+  .photo-download { top: 8px; right: 8px; font-size: 12px; }
+  .photo-download > summary { padding: 9px 12px; }
+}
+@media print { .photo-download { display: none; } }

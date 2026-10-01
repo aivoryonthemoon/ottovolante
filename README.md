@@ -2,7 +2,7 @@
 
 Sito di Mauro Ottolini e dell'Orchestra Ottovolante.
 
-**Sito pubblico:** https://mooooonn.github.io/ottovolante/
+**Sito pubblico:** https://aivoryonthemoon.github.io/ottovolante/
 
 ## Anteprima locale
 

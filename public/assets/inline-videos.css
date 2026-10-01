@@ -72,7 +72,73 @@
   outline: 3px solid #2762ad;
   outline-offset: 4px;
 }
+.youtube-controls {
+  margin: 12px 0 0;
+  text-align: left;
+}
+.youtube-controls[hidden],
+[data-disable-youtube][hidden] { display: none !important; }
+.youtube-controls button,
+.youtube-consent button {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background: #fff;
+  color: #222;
+  font: 600 15px/1.4 Arial, sans-serif;
+  cursor: pointer;
+}
+.youtube-controls button:hover,
+.youtube-consent button:hover { background: #eee; }
+.youtube-consent {
+  box-sizing: border-box;
+  width: min(560px, calc(100vw - 32px));
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 24px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 16px 60px #0005;
+  font: 16px/1.5 Arial, sans-serif;
+  text-align: left;
+}
+.youtube-consent::backdrop { background: #0009; }
+.youtube-consent h2 {
+  margin: 0 0 12px;
+  padding: 0;
+  color: #222;
+  font: 700 24px/1.25 Arial, sans-serif;
+}
+.youtube-consent p { margin: 12px 0; padding: 0; }
+.youtube-consent .youtube-consent-video { font-weight: 600; }
+.youtube-consent a {
+  color: #1c4e8a;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+.youtube-consent-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+.youtube-consent-actions button { flex: 1 1 180px; }
+.youtube-consent :is(button, a):focus-visible,
+.youtube-controls button:focus-visible,
+[data-disable-youtube]:focus-visible {
+  outline: 3px solid #2762ad;
+  outline-offset: 3px;
+}
 @media (max-width: 480px) {
+  .youtube-consent { padding: 20px; }
+  .youtube-consent h2 { font-size: 22px !important; line-height: 1.25 !important; }
   .inline-video .youtube-play::before { width: 64px; height: 45px; border-radius: 12px; }
   .inline-video .youtube-play::after {
     border-top-width: 10px;

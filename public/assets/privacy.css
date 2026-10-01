@@ -1,0 +1,65 @@
+.privacy-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  padding: 24px 12px 0;
+  color: #404040;
+  font: 15px/1.6 Helvetica, Arial, sans-serif;
+}
+.privacy-footer a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.privacy-disable {
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+.privacy-disable[hidden] { display: none; }
+.privacy-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.privacy-footer :focus-visible,
+.privacy-page :focus-visible { outline: 3px solid #2762ad; outline-offset: 4px; }
+.video-nojs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  min-height: 100%;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #f0f0f0;
+  color: #303030;
+  font: 16px/1.5 Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+.video-nojs a { color: #164c8a; text-decoration: underline; }
+.privacy-page { margin: 0; background: #fafafa; color: #404040; font: 17px/1.7 Raleway, Arial, sans-serif; }
+.privacy-page * { box-sizing: border-box; }
+.privacy-page main { width: min(100%, 840px); margin: 0 auto; padding: 40px 24px 60px; }
+.privacy-page nav { margin-bottom: 36px; }
+.privacy-page a { color: #164c8a; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.privacy-page h1 { margin: 0 0 8px; color: #2a2a2a; font-size: clamp(28px, 5vw, 40px); line-height: 1.2; }
+.privacy-page h2 { margin: 36px 0 12px; color: #2a2a2a; font-size: 23px; line-height: 1.35; }
+.privacy-page p { margin: 12px 0; }
+.privacy-page ul { padding-left: 24px; }
+.privacy-page li + li { margin-top: 8px; }
+.privacy-updated { color: #686868; font-size: 14px; }
+.privacy-intro { margin: 28px 0; padding: 20px; border-left: 3px solid #404040; background: #eee; }
+.privacy-page footer { margin-top: 40px; border-top: 1px solid #ccc; padding-top: 24px; }
+@media (max-width: 480px) {
+  .privacy-page main { padding: 28px 20px 40px; }
+  .privacy-intro { padding: 16px; }
+}
